@@ -1,5 +1,5 @@
 import imgCarga from "./pokeload.gif"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Loader = () => {
 

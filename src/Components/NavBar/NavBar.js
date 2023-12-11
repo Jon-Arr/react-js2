@@ -4,7 +4,6 @@ import { NavLink, Link } from "react-router-dom"
 import { useContext } from "react"
 import {ThemeContext} from "../../Context/ThemeContext"
 import * as Icon from 'react-bootstrap-icons'
-import { CartContext } from "../../Context/CartContext"
 
 const NavBar = () => {
 
@@ -30,7 +29,9 @@ const NavBar = () => {
                     <li><NavLink activeclassname="active" to={'/category/misc'} className="cat-button">Otros</NavLink></li>
                 </ul>
             </div>
-            <CartWidget />
+            <Link to={'/cart'}>
+                <CartWidget />
+            </Link>
         </div>
     )
 }

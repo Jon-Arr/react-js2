@@ -9,7 +9,6 @@ import ThemeProvider from "./Context/ThemeProvider"
 
 function App() {
 
-
   return (
     <BrowserRouter>
       <ThemeProvider>
