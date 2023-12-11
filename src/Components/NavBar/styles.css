@@ -1,0 +1,62 @@
+.NavBar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: red;
+}
+h1{
+    font-size: 2rem;
+}
+.cont-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0px;
+    color: white;
+    margin-bottom: 20px;
+}
+.logo{
+    align-self: center;
+    width: 100px;
+    height: 100px;    
+    border-radius: 20px;
+}
+.div-list-cont{
+    display: flex;
+}
+.list-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    list-style: none;
+    width: 100%;  
+    margin-top: 0;
+    padding-top: 20px;
+    padding-left: 0;
+}
+.cat-button{
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.7rem;
+    cursor: pointer;
+    text-decoration:underline;
+    margin-right: 10px;
+}
+.active{
+    color:rgb(255, 255, 255);
+    font-size: 1.9rem;
+    text-decoration: none;
+}
+.themeIcon{
+    display: flex;
+    align-self: center;
+    font-size: 30px;
+    border: white 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px black;
+    background-color: rgba(0, 0, 0, 0.422);
+}

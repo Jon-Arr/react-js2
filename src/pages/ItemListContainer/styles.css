@@ -1,0 +1,11 @@
+h4{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 1.8rem;
+}
+.cont-item-list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

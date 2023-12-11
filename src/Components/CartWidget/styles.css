@@ -1,0 +1,8 @@
+.cart-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    color: white;
+    font-size: 2rem;
+}
