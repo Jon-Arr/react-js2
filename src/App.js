@@ -6,6 +6,18 @@ import ItemDetailContainer from './pages/ItemDetailContainer/ItemDetailContainer
 import Cart from './pages/Cart/Cart';
 import CartProvider from "./Context/CartProvider"
 import ThemeProvider from "./Context/ThemeProvider"
+import { initializeApp } from 'firebase/app';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBEiYYgFqLXgfjIlkjOaVaONnXxLZ8_Ea4",
+    authDomain: "coderhouse-ecommerce-b00aa.firebaseapp.com",
+    projectId: "coderhouse-ecommerce-b00aa",
+    storageBucket: "coderhouse-ecommerce-b00aa.appspot.com",
+    messagingSenderId: "229360568317",
+    appId: "1:229360568317:web:3f09039cc6c6c5f08fbb94"
+  };
+
+  const app = initializeApp(firebaseConfig);
 
 function App() {
 

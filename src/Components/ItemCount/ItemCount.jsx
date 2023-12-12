@@ -14,7 +14,7 @@ const ItemCount = ({stock, setCount, count}) => {
   return (
 
     <div>
-      {count === 0 ? null : <button onClick={onSubstract}>-</button>}
+      <button onClick={onSubstract}>-</button>
       <span>{count}</span>
       {count === stock ? null : <button onClick={onAdd}>+</button>}
     </div>

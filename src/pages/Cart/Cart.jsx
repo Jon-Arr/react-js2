@@ -5,7 +5,7 @@ import './styles.css'
 
 const Cart = () => {
 
-  const { products, clear } = useContext(CartContext)
+  const { products, clear, removeItem } = useContext(CartContext)
 
   return (
     <div className="container">
@@ -16,6 +16,7 @@ const Cart = () => {
         <div >
           {products.map((product) => {
             return (
+              <div key={Item.id}>
               <Item
                 name={product.name}
                 description={product.description}
@@ -23,6 +24,8 @@ const Cart = () => {
                 image={product.image}
                 stock={product.stock}
               />
+              <button onClick={() => removeItem(product.id)}>Quitar</button>
+              </div>
             )
 
           })}

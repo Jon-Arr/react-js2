@@ -7,11 +7,24 @@ const CartProvider = ({children}) => {
     const [productsQuantity, setProductQuantity] = useState([])
 
     const addItem = (product, quantity) => {
+      if(isInCart(product.id)){
+        const newProducts = products.map((item) => {
+          if(item.id === product.id){
+            return{
+              ...item,
+              quantity: item.quantity + quantity,
+            }
+          }
+          return item
+        })
+        setProducts(newProducts)
+        return
+      }
         setProducts([...products, {...product, quantity,},])
     }
 
-    const clear = () => {
-      setProducts([])
+    const removeItem = (productId) => {
+      setProducts(products.filter((product) => product.id !== productId))
     }
 
     useEffect(() => {
@@ -20,8 +33,17 @@ const CartProvider = ({children}) => {
         )
     }, [products])
 
+    
+    const clear = () => {
+      setProducts([])
+    }
+
+    const isInCart = (id) =>{
+      return products.some((product) => product.id === id)
+    }
+
   return (
-    <CartContext.Provider value={{products, addItem, productsQuantity, clear}}> 
+    <CartContext.Provider value={{products, addItem, productsQuantity, clear, removeItem}}> 
     {children}
     </CartContext.Provider>
   )
