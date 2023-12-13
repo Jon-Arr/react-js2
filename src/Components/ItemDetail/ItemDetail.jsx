@@ -6,7 +6,7 @@ import { CartContext } from '../../Context/CartContext'
 
 const ItemDetail = ({itemSelected}) => {
 
-  const stock = 5
+  const stock = itemSelected?.stock
   const [count, setCount] = useState(1)
   const navigate = useNavigate()
   const {addItem} = useContext (CartContext)
@@ -27,7 +27,7 @@ const ItemDetail = ({itemSelected}) => {
             <p>{itemSelected?.description}</p>
         </div>
         <p>${itemSelected?.price}</p>
-          <span>Stock: {stock}</span>
+          <span>Stock: {itemSelected?.stock}</span>
 
         <div>
           <ItemCount count={count} setCount={setCount} stock={stock} />
