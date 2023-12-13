@@ -9,6 +9,18 @@
 h1{
     font-size: 2rem;
 }
+.cont-complete-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0px;
+    color: white;
+    margin-bottom: 20px;
+    border: 2px rgb(52, 52, 52) solid;
+    box-shadow: 5px 5px black;
+    border-radius: 20px;
+    padding: 10px;
+}
 .cont-logo{
     display: flex;
     flex-direction: column;
@@ -44,11 +56,16 @@ h1{
     cursor: pointer;
     text-decoration:underline;
     margin-right: 10px;
+    border: 2px rgb(52, 52, 52) solid;
+    box-shadow: 5px 5px black;
+    border-radius: 20px;
+    padding: 10px;
 }
 .active{
     color:rgb(255, 255, 255);
     font-size: 1.9rem;
     text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.232);
 }
 .themeIcon{
     display: flex;

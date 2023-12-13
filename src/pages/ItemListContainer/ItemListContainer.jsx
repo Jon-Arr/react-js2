@@ -62,7 +62,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return loading ? <Loader /> :
         <div className='cont-item-lists' style={{ backgroundColor: colorTheme.theme === 'light' ? 'white' : 'gray', }}>
-            <h4>{greeting}</h4>
+            <h2>{greeting}</h2>
             <ItemList productList={products} />
             <button onClick={upToFirestore}>Subir data</button>
         </div>
