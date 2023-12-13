@@ -2,11 +2,14 @@ import { useContext, useState } from "react"
 import { CartContext } from "../../Context/CartContext"
 import Item from "../../Components/Item/Item"
 import { Form } from "react-bootstrap"
+import { collection, addDoc, getFirestore, doc, updateDoc } from "firebase/firestore"
+import { useNavigate } from "react-router-dom"
 import './styles.css'
-import { collection, addDoc, getFirestore } from "firebase/firestore"
 
 const Cart = () => {
 
+  const navigate = useNavigate()
+  const db = getFirestore()
   const [formValue, setFormValue] = useState({
     name: '',
     phone: '',
@@ -23,7 +26,6 @@ const Cart = () => {
 
   const createOrder = (event) => {
     event.preventDefault()
-    const db = getFirestore()
     const querySnapshot = collection(db, 'orders')
 
     const newOrder = {
@@ -40,8 +42,22 @@ const Cart = () => {
       total: products.reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
     }
     addDoc(querySnapshot, newOrder)
-      .then((res) => alert('Compra exitosa!'))
+      .then((resp) => {
+        updateProductStock()
+        alert(`Compra exitosa! IdOrden: ${resp.id}`)
+        clear()
+        navigate('/')
+      })
       .catch((err) => console.log(err))
+  }
+
+  const updateProductStock = (product) =>{
+    products.forEach(product => {
+      const querySnapshot = doc(db, 'products', product.id)
+      updateDoc(querySnapshot, {
+        stock: product.stock - product.quantity,
+      })
+    });
   }
 
   return (
@@ -61,6 +77,7 @@ const Cart = () => {
                   image={product.image}
                   stock={product.stock}
                 />
+                <h3>Comprando: {product.quantity}</h3>
                 <button onClick={() => removeItem(product.id)}>Quitar</button>
               </div>
             )

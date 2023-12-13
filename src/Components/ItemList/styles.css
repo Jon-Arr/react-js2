@@ -21,4 +21,6 @@
     margin: 20px;
     padding: 10px;
     box-shadow: 5px 5px black;
+    text-decoration: none;
+    color: black;
 }
