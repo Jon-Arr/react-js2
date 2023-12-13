@@ -1,3 +1,31 @@
+# Tienda Pokemon Online
+
+Una pequeña tienda de todos los objetos que requieres como entrenador Pokemon, desde pokeballs hasta tecnicas MT para llegar a ser el mejor entrenador...
+
+## Como usar?
+
+Solo selecciona un item de la pagina principal o navega en el menu superior para encontrar el objeto que buscas, elije la cantidad deseada y termina tu compra mediante el formulario que encontraras en el carrito para obtener tu id de compra
+
+### Mas...
+
+Esta tienda fue creada mediante la libreria ReactJS, la cual fue usada como base para nuestra negocio, que en conjunto con:
+
+-React-bootstrap-icons (Libreria de iconos)
+-Firebase (Infraestructura para nuestra base de datos de items a la venta)
+-React-router-dom (Libreria para la navegacion dentro le la tienda),
+
+se logro obtener el mejor resultado para tu experiencia pokemon.
+
+Test de tienda pokemon en raiz (TestTiendaPokemon.gif)
+
+
+
+# Navegacion
+
+[![Alt text](https://m.media-amazon.com/images/I/71p7KdLe3XL._AC_UF894,1000_QL80_.jpg)](https://digitalocean.com)
+
+--------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -13,7 +13,7 @@ const NavBar = () => {
         <div className="NavBar">
             <div className="cont-complete-logo">
                 <Link className="cont-logo" to={'/'}>
-                <h1>Tienda Pokémon</h1>
+                <h1>Tienda Pokémon Online</h1>
                 <img className="logo" alt="Imagen tienda Pokemon" src={"./tienda.webp"} />
                 </Link>
                 
